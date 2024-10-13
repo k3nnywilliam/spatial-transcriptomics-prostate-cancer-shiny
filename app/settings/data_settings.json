@@ -1,0 +1,9 @@
+[
+  {
+    "prostate_bam" : "Visium_FFPE_Human_Prostate_IF_possorted_genome_bam.bam",
+  "prostate_bam_index" : "Visium_FFPE_Human_Prostate_IF_possorted_genome_bam.bam.bai",
+  "prostate_filtered_feature_bc_matrix" : "Visium_FFPE_Human_Prostate_IF_filtered_feature_bc_matrix.h5",
+  "prostate_raw_feature_bc_matrix" : "Visium_FFPE_Human_Prostate_IF_raw_feature_bc_matrix.h5",
+  "prostate_tissue_positions" : "tissue_positions.csv"
+  }
+]
