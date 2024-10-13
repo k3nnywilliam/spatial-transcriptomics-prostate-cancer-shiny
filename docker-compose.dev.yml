@@ -1,0 +1,18 @@
+version: '3.9'
+
+services:
+  shiny:
+    images: testis-aging-dev-app:latest
+    ports:
+      - "3000:3838"
+    environment:
+      - ENV_VAR_NAME=value
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx_dev.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - shiny
