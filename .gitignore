@@ -1,10 +1,13 @@
 *.rds
+app/temp/tester.R
 tester.R
 *.Rproj
 *.Rhistory
 *.Rprofile
 .DS_Store
 .Rproj.user/
+
+renv/
 
 app/data/*
 app/data/

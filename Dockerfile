@@ -1,5 +1,5 @@
 # Base image from https://hub.docker.com/r/rstudio/r-base
-FROM rstudio/r-base:4.4.3-focal
+FROM rstudio/r-base:4.4.1-focal
 
 RUN apt-get update
 
@@ -43,10 +43,8 @@ RUN apt-get -y install ./shiny-server-1.5.15.953-amd64.deb
 ## Copy renv lockfile to root
 #COPY renv.lock /
 # Install specific package versions from renv lockfile (renv.lock)
-RUN Rscript -e 'install.packages(c("renv", "remotes", "pak", "httpuv", "devtools"), repos = c(RSPM = "https://packagemanager.rstudio.com/cran/latest", CRAN = "https://cloud.r-project.org"))'
-RUN Rscript -e 'remotes::install_version("BiocManager", "3.19")'
-
-RUN Rscript -e 'remotes::install_github("https://github.com/cran/Matrix/releases/download/1.7-0/Matrix_1.7-0_b3_R4.4_x86_64-pc-linux-gnu-ubuntu-22.04-libc++.tar.gz")'
+RUN Rscript -e 'install.packages(c("renv", "remotes", "pak", "httpuv", "devtools", "stringr", "Matrix"), repos = c(RSPM = "https://packagemanager.rstudio.com/cran/latest", CRAN = "https://cloud.r-project.org"))'
+RUN Rscript -e 'install.packages("BiocManager", repos = "https://cloud.r-project.org")'
 
 RUN Rscript -e 'BiocManager::install("Rsamtools")'
 RUN Rscript -e 'BiocManager::install("GenomicAlignments")'
