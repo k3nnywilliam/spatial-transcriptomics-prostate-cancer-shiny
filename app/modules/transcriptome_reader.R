@@ -3,14 +3,14 @@ ui_module_Genomics10xVisualizer <- function(id){
   tabPanel(
     title = "Viewer",
     fluid = TRUE,
-    absolutePanel(
-      #top = 100, 
-      #left = 70, 
-      draggable = FALSE, width = "100%", 
-      #style = "z-index:500; min-width: 300px;",
-      actionButton(ns("show_visualizer"), "Show Visualization"),
-      tags$div(id = ns("deckgl-container"))  # Placeholder for deck.gl visualization
-    )
+    #absolutePanel(
+    #  #top = 100, 
+    #  #left = 70, 
+    #  draggable = FALSE, width = "100%", 
+    #  #style = "z-index:500; min-width: 300px;",
+    #)
+    actionButton(ns("show_visualizer"), "Show Visualization"),
+    tags$div(id = ns("deckgl-container"))  # Placeholder for deck.gl visualization
   )
 }
 

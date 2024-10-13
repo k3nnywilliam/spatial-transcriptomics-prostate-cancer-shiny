@@ -12,7 +12,6 @@ const spatialTranscriptomicsData = [
   // More spots...
 ];
 
-  
 function initializeDeckGL(visium_data) {
   //const visium_json_data = JSON.parse(visium_data);
   //console.log(visium_json_data);
@@ -24,7 +23,6 @@ function initializeDeckGL(visium_data) {
   const adjustedMaxX = maxX; // 0 (new right edge)
   const adjustedMinY = maxY; // 0 (top remains unchanged)
   const adjustedMaxY = minY; // 1885 (bottom remains unchanged)
-  
   const bounds = [minX, minY, maxX, maxY];  // Replace these with the bounds of your tissue image
   const adjustedBounds = [adjustedMinX, adjustedMinY, adjustedMaxX, adjustedMaxY]; 
   
@@ -32,7 +30,7 @@ function initializeDeckGL(visium_data) {
   const tissue_bitmapLayer = new deck.BitmapLayer({
     id: 'bitmap-layer',
     bounds: adjustedBounds,  // Coordinates [minX, minY, maxX, maxY] for the image bounds
-    image: 'tissue_hires_image.png', //'tissue_lowres_image.png' // Path to the image in the www folder
+    image: 'detected_tissue_image.jpg', //'tissue_lowres_image.png' // Path to the image in the www folder
     opacity: 1.0
   });
   
@@ -40,7 +38,6 @@ function initializeDeckGL(visium_data) {
   const orthographicView = new deck.OrthographicView({
     id: 'ortho-view',
     controller: true,  // Enable zoom and pan
-    // You can set the initial view state here
   });
   
   // Create a deck.gl scatterplot layer

@@ -1,5 +1,8 @@
 *.rds
 app/temp/tester.R
+app/renv/*
+app/venv/*
+venv/
 tester.R
 *.Rproj
 *.Rhistory

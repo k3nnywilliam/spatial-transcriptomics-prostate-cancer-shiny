@@ -1,11 +1,11 @@
 ui <- tagList(
   useWaiter(), 
-  #waiterPreloader(html = tagList(
-  #  p("WELCOME"),
-  #  spin_3()
-  #),
-  #color = "#000000",
-  #fadeout = TRUE),
+  waiterPreloader(html = tagList(
+    p("WELCOME"),
+    spin_3()
+  ),
+  color = "#000000",
+  fadeout = TRUE),
   navbarPage(
     "Spatial Transcriptomic",
     tags$head(
@@ -26,13 +26,13 @@ ui <- tagList(
       #bootswatch = "darkly"),
     ),
     ui_module_Genomics10xVisualizer('visualizer'),
-    footer = tags$footer(
-      HTML(
-        '
-        <br>
-        <br>
-        <p class = "page-footer"> ', paste0("This Shiny app was made by Kenny Anak William Nyallau © 2024"),'</p>')
-    )
+    #footer = tags$footer(
+    #  HTML(
+    #    '
+    #    <br>
+    #    <br>
+    #    <p class = "page-footer"> ', paste0("This Shiny app was made by Kenny Anak William Nyallau © 2024"),'</p>')
+    #)
   ) #End of navbar
 )
 
