@@ -1,0 +1,10 @@
+*.rds
+tester.R
+*.Rproj
+*.Rhistory
+*.Rprofile
+.DS_Store
+.Rproj.user/
+
+app/data/*
+app/data/
